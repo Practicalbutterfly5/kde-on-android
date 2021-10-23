@@ -84,7 +84,7 @@ _Backup and rename your /sdcard/linux.img if you have one_
    
 ### Customisation
 This section includes some customisations to make life easier. ;-). These steps are completely voluntary, and my personal preference.
-Login to ubuntu via termux or vnc viewer (and open konsole). Also restart linux container after any customisation.
+Login to ubuntu via termux or vnc viewer (and open konsole). Also restart linux container after customisation to take effect.
 1. Install firefox : `sudo apt install -y firefox`
 2. Install ZSH as default shell : `sudo apt install -y zsh && sudo chsh zsh`
 3. Install OhMyZsh : `sudo apt install -y curl && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
