@@ -104,4 +104,4 @@ Login to ubuntu via termux or vnc viewer (and open konsole). Also restart linux 
         1. `pacmd load-module module-native-protocol-tcp auth-anonymous=1` (You can also add it to your .profile file, so it will run on startup from next boot.)
         2. `ifconfig` (and get the `inet` address. Lets call it internal_ip)
              - Login to ubuntu via termux and type `audioserver internal_ip` (Replace internal_ip with the inet address you got from linux pc. After this command vncserver will restart and you have to reconnect to vnc with audio output to your linux pc ip address.)
-9. Installing kde-full : KDE just doesn't end here. KDE has its own, tons of personalised and beautiful ui applications. Install full set of kde applications by running `sudo apt install -y kde-full` (approx 200Mb).
+9. Installing kde-full : KDE just doesn't end here. KDE has its own, tons of personalised and beautiful ui applications. Install full set of kde applications by running `sudo apt install -y kde-full` (approx 1000 Mb).
