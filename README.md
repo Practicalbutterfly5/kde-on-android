@@ -88,7 +88,7 @@ Login to ubuntu via termux or vnc viewer (and open konsole). Also restart linux 
 1. Install firefox : `sudo apt install -y firefox`
 2. Install ZSH as default shell : `sudo apt install -y zsh && sudo chsh zsh`
 3. Install OhMyZsh : `sudo apt install -y curl && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-4. Install zsh plugins : [zsh-auto-suggesitons](https://github.com/zsh-users/zsh-autosuggestions), [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) and command-not-found . Open ~\.zshrc and change the plugins line to `plugins=(git command-not-found zsh-autosuggesitions zsh-syntax-highlighting)` . Note that zsh-syntax-highlighting should be the last plugin.
+4. Install zsh plugins : [zsh-auto-suggesitons](https://github.com/zsh-users/zsh-autosuggestions), [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) and command-not-found . Open ~/.zshrc and change the plugins line to `plugins=(git command-not-found zsh-autosuggesitions zsh-syntax-highlighting)` . Note that zsh-syntax-highlighting should be the last plugin.
 5. Installing [kdeconnect - The ultimate android integration with linux](https://linuxconfig.org/connect-your-android-phone-to-linux-with-kde-connect)
 6. Resizing linux.img, in case your linux runs out of storage.
    1. Make sure linux container is stopped. Linux Deploy>STOP.
