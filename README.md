@@ -1,3 +1,4 @@
+
 # kde-on-android
 Install kde-plasma-desktop and ubuntu on android (chroot)
 
@@ -5,7 +6,7 @@ Install kde-plasma-desktop and ubuntu on android (chroot)
 
 **Requires at least 5 GB of storage, approx <1.5 GB of network data**
 
-![photo_2021-10-23_07-35-21](https://user-images.githubusercontent.com/75225829/138538986-b659b21f-9e85-4f57-abc5-c6503ec544bb.jpg)
+![Screenshot_20211024-041713156](https://user-images.githubusercontent.com/79358537/138573844-f72c8bba-5bfb-4aad-bdeb-72c3d93270c2.jpg)
 
 _Backup and rename your /sdcard/linux.img if you have one_
 
@@ -85,7 +86,7 @@ _Backup and rename your /sdcard/linux.img if you have one_
 ### Customisation
 This section includes some customisations to make life easier. ;-). These steps are completely voluntary, and my personal preference.
 Login to ubuntu via termux or vnc viewer (and open konsole). Also restart linux container after customisation to take effect.
-1. Install firefox : `sudo apt install -y firefox`
+1. Install **firefox : `sudo apt install -y firefox`
 2. Install ZSH as default shell : `sudo apt install -y zsh && sudo chsh $(which zsh)`
 3. Install OhMyZsh : `sudo apt install -y curl git && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 4. Install zsh plugins : [zsh-auto-suggesitons](https://github.com/zsh-users/zsh-autosuggestions), [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) and command-not-found . Open ~/.zshrc and change the plugins line to `plugins=(git command-not-found zsh-autosuggesitions zsh-syntax-highlighting)` . Note that zsh-syntax-highlighting should be the last plugin.
