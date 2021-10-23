@@ -20,7 +20,7 @@ _Backup and rename your /sdcard/linux.img if you have one_
    4. Init > Enable (tick checkbox)
    5. Init > Init Settings > Init user : `username`
    6. Mounts > Enable (tick checkbox)
-   7. Mounts > Mount points > `+` icon on top right >  Source : `/sdcard` Targer : `/sdcard`
+   7. Mounts > Mount points > `+` icon on top right >  Source : `/sdcard` Target : `/sdcard`
    8. SSH > Enable (tick checkbox)
 4. Click `⋮` icon in Linux Deploy > Install . It needs a stable Internet connection, otherwise it might fail at some step. Proceed to next step only after installation is complete.
 5. Press `START` button in Linux Deploy.
