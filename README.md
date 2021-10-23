@@ -86,23 +86,23 @@ _Backup and rename your /sdcard/linux.img if you have one_
 ### Customisation
 This section includes some customisations to make life easier. ;-). These steps are completely voluntary, and my personal preference.
 Login to ubuntu via termux or vnc viewer (and open konsole). Also restart linux container after customisation to take effect.
-1. Install **firefox : `sudo apt install -y firefox`
-2. Install ZSH as default shell : `sudo apt install -y zsh && sudo chsh $(which zsh)`
-3. Install OhMyZsh : `sudo apt install -y curl git && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-4. Install zsh plugins : [zsh-auto-suggesitons](https://github.com/zsh-users/zsh-autosuggestions), [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) and command-not-found . Open ~/.zshrc and change the plugins line to `plugins=(git command-not-found zsh-autosuggesitions zsh-syntax-highlighting)` . Note that zsh-syntax-highlighting should be the last plugin.
-5. Installing [kdeconnect - The ultimate android integration with linux](https://linuxconfig.org/connect-your-android-phone-to-linux-with-kde-connect)
-6. Resizing linux.img, in case your linux runs out of storage.
+1. Install **firefox** : `sudo apt install -y firefox`
+2. Install **ZSH** as default shell : `sudo apt install -y zsh && sudo chsh $(which zsh)`
+3. Install **OhMyZsh** : `sudo apt install -y curl git && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+4. Install **zsh plugins** : [zsh-auto-suggesitons](https://github.com/zsh-users/zsh-autosuggestions), [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) and command-not-found . Open ~/.zshrc and change the plugins line to `plugins=(git command-not-found zsh-autosuggesitions zsh-syntax-highlighting)` . Note that zsh-syntax-highlighting should be the last plugin.
+5. Installing [**kdeconnect** - The ultimate android integration with linux](https://linuxconfig.org/connect-your-android-phone-to-linux-with-kde-connect)
+6. **Resizing** linux.img, in case your linux runs out of storage.
    1. Make sure linux container is stopped. Linux Deploy>STOP.
    2. In termux type 
       - `e2fsck -f /sdcard/linux.img` (Press enter on all prompts.)
       - `resize2fs /sdcard/linux.img 10G` (Replace 10G with the amount of storage u want linux to have)
-7. Changing Display Resolution : If you are using vnc viewer on PC then you might have to change resolution. First get the resolution of your PC display. You can google it, or in Linux pc use `xdpyinfo | grep 'dimensions:'` to find resolution.
+7. Changing **Display Resolution** : If you are using vnc viewer on PC then you might have to change resolution. First get the resolution of your PC display. You can google it, or in Linux pc use `xdpyinfo | grep 'dimensions:'` to find resolution.
    - Run the following command in ubuntu to change resolution. Replace 1366x768 with your resolution 
      `sudo bash -c 'echo -e "#!/bin/bash \n [[ -z "\$PULSE_SERVER" ]] && export PULSE_SERVER=127.0.0.1 \n sudo rm -rf /etc/profile.d/pulse.sh \n vncserver -kill :1 \n sudo rm /tmp/.X11-unix/X1 /tmp/.X1-lock \n dbus-launch tigervncserver -localhost no -geometry 1366x768 -xstartup /usr/bin/startplasma-x11 -listen tcp :1" > /etc/rc.local/init'`
-8. Setting up audio output :
+8. Setting up **audio output** :
     - **Audio via android** : Make sure that termux is running in background, and audio should work out-of-the-box.
     - **Audio via Linux pc** : Currently I only know how to do this on linux pc with pulseaudio installed. Open terminal your linux pc and type :
         1. `pacmd load-module module-native-protocol-tcp auth-anonymous=1` (You can also add it to your .profile file, so it will run on startup from next boot.)
         2. `ifconfig` (and get the `inet` address. Lets call it internal_ip)
              - Login to ubuntu via termux and type `audioserver internal_ip` (Replace internal_ip with the inet address you got from linux pc. After this command vncserver will restart and you have to reconnect to vnc with audio output to your linux pc ip address.)
-9. Installing kde-full : KDE just doesn't end here. KDE has its own, tons of personalised and beautiful ui applications. Install full set of kde applications by running `sudo apt install -y kde-full` (approx 1000 Mb).
+9. Installing **kde-full** : KDE just doesn't end here. KDE has its own, tons of personalised and beautiful ui applications. Install full set of kde applications by running `sudo apt install -y kde-full` (approx 1000 Mb).
