@@ -64,7 +64,7 @@ _Backup and rename your /sdcard/linux.img if you have one_
 1. Start container from Linux Deploy>START.
 1. Install the [VNC viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android) app.
 2. Add a new computer and use `locahost:5901`as address.
-3. Enter you vnc password that you had set with vncpasswd.
+3. Enter your vnc password that you had set with vncpasswd.
 4. Enjoy. :-)
 
 ## View on PC
