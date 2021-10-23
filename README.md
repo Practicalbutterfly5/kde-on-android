@@ -70,7 +70,7 @@ _Backup and rename your /sdcard/linux.img if you have one_
 ## View on PC
 1. Start container from Linux Deploy>START.
 1. Install Remmina
-   - On Windows: Use any VNC viewer available for windows. For example TigerVNC or realVNC. I don't use windows do I don't know which is better.
+   - On Windows: Use any VNC viewer available for windows. For example TigerVNC or realVNC. I don't use windows so I don't know which is better.
    - On Linux PC: `sudo apt install -y --install-suggests remmina remmina-plugin-vnc`
 2. Connect your android and PC to a common network. For example to a common wifi, or start mobile hotspot and connect PC to it.
 3. Type `ifconfig` in Termux. You will see a screen similiar to below image. Get the `inet` of `wlan0` or `wlan1` whichever represents your common network. This is the address you will use in VNC viewer. Lets call it `internal_ip`
