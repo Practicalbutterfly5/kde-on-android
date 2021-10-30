@@ -51,7 +51,7 @@ _Backup and rename your /sdcard/linux.img if you have one_
    11. `sudo apt install -y kde-plasma-desktop` (Press 'Enter' key on any prompt. Installs plasma kde desktop. apprx 600 Mb. download)
    12. `sudo apt remove -y tightvncserver && sudo apt install -y --install-suggests tigervnc-standalone-server dbus-x11 net-tools`
    13. `sudo service dbus start`
-   14. `sudo bash -c 'echo -e "#!/bin/bash \n [[ -z "\$PULSE_SERVER" ]] && export PULSE_SERVER=127.0.0.1 \n sudo rm -rf /etc/profile.d/pulse.sh \n vncserver -kill :1 \n sudo rm /tmp/.X11-unix/X1 /tmp/.X1-lock \n dbus-launch tigervncserver -localhost no -geometry 1366x768 -xstartup /usr/bin/startplasma-x11 -listen tcp :1" > /etc/rc.local/init'`
+   14. `sudo bash -c 'mkdir -p /etc/rc.local && echo -e "#!/bin/bash \n [[ -z "\$PULSE_SERVER" ]] && export PULSE_SERVER=127.0.0.1 \n sudo rm -rf /etc/profile.d/pulse.sh \n vncserver -kill :1 \n sudo rm /tmp/.X11-unix/X1 /tmp/.X1-lock \n dbus-launch tigervncserver -localhost no -geometry 1366x768 -xstartup /usr/bin/startplasma-x11 -listen tcp :1" > /etc/rc.local/init'`
    15. `sudo bash -c 'echo -e "#!/bin/bash \n [[ ! -z "\$XDG_CURRENT_DESKTOP" ]] &&echo "Execute this command from termux after logging in to ubuntu via ssh" && exit \n export PULSE_SERVER=\$1 \n vncserver -kill :1 \n /etc/rc.local/init">/bin/audioserver '`
    15. `sudo chmod +x /etc/rc.local/init /bin/audioserver`
    16. `vncpasswd` (Here set your VNC password to be used in vnc viewer. Enter `n` when it asks for "Would you like to enter a view-only password".)
